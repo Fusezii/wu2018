@@ -31,11 +31,11 @@ class AI
      */
     public static function getSentiment($text)
     {
-        if(strpos($text,"ดีใจ")!=TRUE)
+        if(strpos($text,"ดีใจ")!==TRUE)
         return 'Positive';
-        if(strpos($text,"เสียใจ")!=TRUE)
+        if(strpos($text,"เสียใจ")!==TRUE)
         return 'Negative';
-        if(strpos($text,"น่าเบื่อ")!=TRUE)
+        else
         return 'Neutral';
         
 
@@ -47,7 +47,7 @@ class AI
      */
     public static function getRudeWords($text)
     {
-       if(strpos($text,"สาส")!=FALSE)
+       if(strpos($text,"สาส")!==FALSE)
         return 'getRudeWords';
     else {
             return 'getRudeWords';
