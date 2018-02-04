@@ -31,12 +31,13 @@ class AI
      */
     public static function getSentiment($text)
     {
-        if(strpos($text,"ดี")!=FALSE)
+        if(strpos($text,"ดีใจ")!=TRUE)
         return 'Positive';
-        elseif(strpos($text,"สุข")!=FALSE)
-        return 'Neutral';
-        else
+        if(strpos($text,"เสียใจ")!=TRUE)
         return 'Negative';
+        if(strpos($text,"น่าเบื่อ")!=TRUE)
+        return 'Neutral';
+        
 
         
     }
@@ -46,13 +47,11 @@ class AI
      */
     public static function getRudeWords($text)
     {
-       /** $result2 = [];
-        $re = ["เหี้ย","สัส","ควย","กาก"];
-        preg_match_all($re, $text, $matches, PREG_SET_ORDER, 0);
-        if (!empty($matches)) {
-            array_push($result2, '$re');
+       if(strpos($text,"สาส")!=FALSE)
+        return 'getRudeWords';
+    else {
+            return 'getRudeWords';
         }
-        return $result2;*/
        
     }
 
