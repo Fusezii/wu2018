@@ -31,9 +31,9 @@ class AI
      */
     public static function getSentiment($text)
     {
-        if(strpos($text,"ดีใจ")!==FALSE)
+        if(strpos($text,"ดีใจ")!=TRUE)
         return 'Positive';
-        if(strpos($text,"เสียใจ")!==FALSE)
+        if(strpos($text,"เสียใจ")!=TRUE)
         return 'Negative';
         else
         return 'Neutral';
